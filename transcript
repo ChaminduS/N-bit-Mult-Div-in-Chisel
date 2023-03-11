@@ -1,0 +1,109 @@
+# Compile of mul_div_constants.v was successful.
+# Compile of Mult.v failed with 1 errors.
+# Compile of Mult.v failed with 4 errors.
+# Compile of Mult.v failed with 3 errors.
+# Compile of Mult.v failed with 1 errors.
+# Compile of Mult.v failed with 1 errors.
+# Compile of Mult.v was successful.
+# Compile of Mult.v failed with 1 errors.
+# Compile of Mult.v failed with 3 errors.
+# Compile of Mult.v failed with 2 errors.
+# Compile of mul_div_constants.v was successful.
+# Compile of Mult.v failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of Mult.v failed with 8 errors.
+# Compile of Mult.v was successful.
+vsim -gui work.multiplier
+# vsim -gui work.multiplier 
+# Start time: 10:01:30 on Mar 11,2023
+# Loading work.multiplier
+add wave -position end  sim:/multiplier/clk
+add wave -position end  sim:/multiplier/reset
+add wave -position end  sim:/multiplier/operand_a_i
+add wave -position end  sim:/multiplier/operand_b_i
+add wave -position end  sim:/multiplier/instruction
+add wave -position end  sim:/multiplier/mult_i_valid
+add wave -position end  sim:/multiplier/mult_o_ready
+add wave -position end  sim:/multiplier/result_o_valid
+add wave -position end  sim:/multiplier/result
+force -freeze sim:/multiplier/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/multiplier/reset 0 0
+force -freeze sim:/multiplier/mult_i_valid 1 0
+force -freeze sim:/multiplier/operand_a_i 32'h8 0
+force -freeze sim:/multiplier/operand_b_i 32'h4 0
+force -freeze sim:/multiplier/instruction 32'h02000033 0
+force -freeze sim:/multiplier/mult_i_valid St1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/multiplier/reset St1 0
+run
+run
+force -freeze sim:/multiplier/instruction 32'h02001033 0
+force -freeze sim:/multiplier/reset St0 0
+run
+run
+run
+force -freeze sim:/multiplier/operand_a_i 32'h10000000 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/multiplier/operand_a_i 32'hFFFFFFFF 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/multiplier/instruction 32'h02002033 0
+run
+run
+run
+force -freeze sim:/multiplier/operand_a_i 32'h80000008 0
+run
+run
+run
+run
+force -freeze sim:/multiplier/instruction 32'h02001033 0
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/multiplier/operand_a_i 32'hFFFFFFF9 0
+force -freeze sim:/multiplier/operand_b_i 32'h00000003 0
+force -freeze sim:/multiplier/instruction 32'h02000033 0
+run
+run
+run
+run
+run
+force -freeze sim:/multiplier/instruction 32'h2001033 0
+run
+run
+run
+run

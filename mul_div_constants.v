@@ -1,0 +1,11 @@
+`define MUL 32'h2000033
+`define MUL_MASK 32'hfe00707f
+
+`define MULH 32'h2001033
+`define MULH_MASK 32'hfe00707f
+
+`define MULHSU 32'h2002033
+`define MULHSU_MASK 32'hfe00707f
+
+`define MULHU 32'h2003033
+`define MULHU_MASK 32'hfe00707f
