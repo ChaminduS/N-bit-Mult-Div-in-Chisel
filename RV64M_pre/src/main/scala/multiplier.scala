@@ -1,31 +1,31 @@
 /*
- * This code is a minimal hardware described in Chisel.
- * 
- * Blinking LED: the FPGA version of Hello World
+Author : Chamindu
+Create Date : 12/03/2023
+Module Name : multiplier
+
+Comments :
  */
 
 import chisel3._
 import chisel3.Driver
 
-/**
- * The blinking LED component.
- */
 
-class multiplier extends Module {
+
+class multiplier (n:Int) extends Module {
   val io = IO(new Bundle {
-    val led = Output(UInt(1.W))
+    val STALL_MUL     = Input(UInt(1.W))
+    val START         = Input(UInt(1.W))
+    val SIGN1         = Input(UInt(1.W))
+    val SIGN2         = Input(UInt(1.W))
+    val MULTIPLIER    = Input(UInt(n.W))
+    val MULTIPLICAND  = Input(UInt(n.W))
+    val PRODUCT_OUT   = Output(UInt(2*n.W))
+    val READY         = Output(UInt(1.W)) 
   })
-  val CNT_MAX = (50000000 / 2 - 1).U;
 
-  val cntReg = RegInit(0.U(32.W))
-  val blkReg = RegInit(0.U(1.W))
 
-  cntReg := cntReg + 1.U
-  when(cntReg === CNT_MAX) {
-    cntReg := 0.U
-    blkReg := ~blkReg
-  }
-  io.led := blkReg
+
+
 }
 
 /**
