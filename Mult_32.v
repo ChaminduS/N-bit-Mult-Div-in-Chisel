@@ -44,22 +44,26 @@ wire mult_inst_w = ((instruction & `MUL_MASK) == `MUL) || ((instruction & `MULH_
 always @ *
 
 begin
-  if ((instruction & `MULHSU_MASK) == `MULHSU)                  //MULHSU
+  if ((instruction & `MULHSU_MASK) == `MULHSU)                  //MULHSU (signed)
     operand_a_r = {operand_a_i[31],operand_a_i[31:0]};
-  else if ((instruction & `MULH_MASK) == `MULH)                 //MULH
+  else if ((instruction & `MULHU_MASK) == `MULHU)                 //MULHU (unsigned)
+    operand_a_r = {1'b0,operand_a_i[31:0]};
+  else if ((instruction & `MULH_MASK) == `MULH)                 //MULH (signed)
     operand_a_r = {operand_a_i[31],operand_a_i[31:0]};
-  else                                                          //MUL
+  else                                                          //MUL (signed)
     operand_a_r = {1'b0,operand_a_i[31:0]};
 end
 
 always @ *
 
 begin
-  if ((instruction & `MULHSU_MASK) == `MULHSU)                  //MULHSU
+  if ((instruction & `MULHSU_MASK) == `MULHSU)                  //MULHSU (unsigned)
     operand_b_r = {1'b0,operand_b_i[31:0]};
-  else if ((instruction & `MULH_MASK) == `MULH)                 //MULH
+  else if ((instruction & `MULHU_MASK) == `MULHU)               //MULHU (unsigned)
+    operand_b_r = {1'b0,operand_b_i[31:0]};
+  else if ((instruction & `MULH_MASK) == `MULH)                 //MULH (signed)
     operand_b_r = {operand_b_i[31],operand_b_i[31:0]};
-  else                                                          //MUL
+  else                                                          //MUL (signed)
     operand_b_r = {1'b0,operand_b_i[31:0]};
 end
 
@@ -117,7 +121,6 @@ end
 assign result = result_q;
 assign mult_o_ready = mult_ready;
 assign result_o_valid = result_valid;
-
 
 
 
