@@ -24,7 +24,33 @@ class multiplier (n:Int) extends Module {
   })
 
 
+  val Acc = RegInit(0.U(n.W))
+  val Q = RegInit(0.U(n.W))                     //Q = Multiplier
+  val M = RegInit(0.U(n.W))                     //M = Multiplicand
+  val Q_min1 = RegInit(0.U(1.W))
+  val count = RegInit(n.U(n.W))
 
+  val Q_Q_min1 = Cat(Q(0),Q_min1)
+
+  when (count == 0){
+
+  }
+  .otherwise{
+    switch(Q_Qmin_1){
+      is (2'b00){
+
+      }
+      is (2'b01){
+
+      }
+      is (2'b11){
+
+      }
+      is (2'b10){
+        
+      }
+    }
+  }
 
 }
 
