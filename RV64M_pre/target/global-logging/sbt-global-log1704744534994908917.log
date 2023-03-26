@@ -1,0 +1,70 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(7c8ae7d8-81de-4075-8acf-90d8d5d00cea), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to D:\FYP\RISC-V_mul_div_unit\RV64M_pre\target\scala-2.12\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:36:18: not found: value Cat[0m
+[0m[[0m[31merror[0m] [0m[0m  val Q_Q_min1 = Cat(Q(0),Q_min1)[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:36:22: not found: value Q[0m
+[0m[[0m[31merror[0m] [0m[0m  val Q_Q_min1 = Cat(Q(0),Q_min1)[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:38:9: not found: value RESET[0m
+[0m[[0m[31merror[0m] [0m[0m  when (RESET){[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:39:14: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Int(64)[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.Data[0m
+[0m[[0m[31merror[0m] [0m[0m    count := 64[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:41:17: not found: value STALL_MUL[0m
+[0m[[0m[31merror[0m] [0m[0m  } .elsewhen (~STALL_MUL){[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:42:10: not found: value START[0m
+[0m[[0m[31merror[0m] [0m[0m    when(START){[0m
+[0m[[0m[31merror[0m] [0m[0m         ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:44:13: not found: value SIGN1[0m
+[0m[[0m[31merror[0m] [0m[0m      when (SIGN1 & MULTIPLIER(63)){[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:44:21: not found: value MULTIPLIER[0m
+[0m[[0m[31merror[0m] [0m[0m      when (SIGN1 & MULTIPLIER(63)){[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:45:24: not found: value MULTIPLIER[0m
+[0m[[0m[31merror[0m] [0m[0m        multiplier := ~MULTIPLIER + 1.U[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:47:23: not found: value MULTIPLIER[0m
+[0m[[0m[31merror[0m] [0m[0m        multiplier := MULTIPLIER[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:50:13: not found: value SIGN2[0m
+[0m[[0m[31merror[0m] [0m[0m      when (SIGN2 & MULTIPLICAND(63)){[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:50:21: not found: value MULTIPLICAND[0m
+[0m[[0m[31merror[0m] [0m[0m      when (SIGN2 & MULTIPLICAND(63)){[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:51:26: not found: value MULTIPLICAND[0m
+[0m[[0m[31merror[0m] [0m[0m        multiplicand := ~MULTIPLICAND + 1.U[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:53:25: not found: value MULTIPLICAND[0m
+[0m[[0m[31merror[0m] [0m[0m        multiplicand := MULTIPLICAND[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:57:16: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Int(64)[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.Data[0m
+[0m[[0m[31merror[0m] [0m[0m      count := 64[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:58:22: not found: value SIGN1[0m
+[0m[[0m[31merror[0m] [0m[0m      neg_output := (SIGN1 & MULTIPLIER(63)) ^ (SIGN2 & MULTIPLICAND(63))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:58:30: not found: value MULTIPLIER[0m
+[0m[[0m[31merror[0m] [0m[0m      neg_output := (SIGN1 & MULTIPLIER(63)) ^ (SIGN2 & MULTIPLICAND(63))[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:58:49: not found: value SIGN2[0m
+[0m[[0m[31merror[0m] [0m[0m      neg_output := (SIGN1 & MULTIPLIER(63)) ^ (SIGN2 & MULTIPLICAND(63))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:58:57: not found: value MULTIPLICAND[0m
+[0m[[0m[31merror[0m] [0m[0m      neg_output := (SIGN1 & MULTIPLIER(63)) ^ (SIGN2 & MULTIPLICAND(63))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m19 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 1 s, completed Mar 12, 2023, 7:59:10 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m

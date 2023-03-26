@@ -1,3 +1,7 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(a1fbaae8-8b33-4202-a430-4ead0424d559), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to D:\FYP\RISC-V_mul_div_unit\RV64M_pre\target\scala-2.12\classes ...[0m
 [0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:46:22: value && is not a member of chisel3.UInt[0m
 [0m[[0m[31merror[0m] [0m[0m      when (io.SIGN1 && io.MULTIPLIER(63)){[0m
 [0m[[0m[31merror[0m] [0m[0m                     ^[0m
@@ -11,3 +15,7 @@
 [0m[[0m[31merror[0m] [0m[0m      neg_output := (io.SIGN1 && io.MULTIPLIER(63)) ^ (io.SIGN2 && io.MULTIPLICAND(63))[0m
 [0m[[0m[31merror[0m] [0m[0m                                                                ^[0m
 [0m[[0m[31merror[0m] [0m[0mfour errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 0 s, completed Mar 13, 2023, 9:42:29 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m

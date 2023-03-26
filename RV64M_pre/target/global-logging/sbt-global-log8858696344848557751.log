@@ -9,9 +9,9 @@
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(onFailure loadFailed, None, None)[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(loadp, None, None)[0m
 [0m[[0m[0minfo[0m] [0m[0mwelcome to sbt 1.5.5 (Oracle Corporation Java 16.0.2)[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.defaultLoad until apply took 774.7408ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: plugins took 96.653516ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: defsScala took 0.27136ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.defaultLoad until apply took 749.46112ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: plugins took 106.468216ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: defsScala took 0.248605ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory D:\FYP\RISC-V_mul_div_unit\RV64M_pre\project[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Found non-root projects [0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in D:\FYP\RISC-V_mul_div_unit\RV64M_pre\project, returning: ()[0m
@@ -28,26 +28,26 @@
 [0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))[0m
 [0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))[0m
 [0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)[0m
-[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 14.255198 ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m              Load.resolveProject(rv64m_pre-build) took 49.648569ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m            Load.loadTransitive: finalizeProject(Project(id rv64m_pre-build, base: D:\FYP\RISC-V_mul_div_unit\RV64M_pre\project, plugins: List(<none>))) took 89.356958ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 17.736264 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m              Load.resolveProject(rv64m_pre-build) took 48.112681ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.loadTransitive: finalizeProject(Project(id rv64m_pre-build, base: D:\FYP\RISC-V_mul_div_unit\RV64M_pre\project, plugins: List(<none>))) took 91.52918ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in D:\FYP\RISC-V_mul_div_unit\RV64M_pre\project, returning: (rv64m_pre-build)[0m
-[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: loadedProjectsRaw took 107.713838ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: cleanEvalClasses took 0.223004ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m        Load.loadUnit(file:/D:/FYP/RISC-V_mul_div_unit/RV64M_pre/project/, ...) took 209.67451ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: load took 437.637635ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: resolveProjects took 5.759992ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: finalTransforms took 81.965394ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: config.delegates took 9.39348ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: Def.make(settings)... took 520.165091ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: structureIndex took 88.611145ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: mkStreams took 1.809633ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: loadedProjectsRaw took 113.525288ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: cleanEvalClasses took 0.202525ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m        Load.loadUnit(file:/D:/FYP/RISC-V_mul_div_unit/RV64M_pre/project/, ...) took 225.846237ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: load took 440.723149ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: resolveProjects took 5.420378ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: finalTransforms took 68.992628ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: config.delegates took 6.943863ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: Def.make(settings)... took 544.915238ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: structureIndex took 106.92162ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: mkStreams took 1.522917ms[0m
 [0m[[0m[0minfo[0m] [0m[0mloading project definition from D:\FYP\RISC-V_mul_div_unit\RV64M_pre\project[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: plugins took 4483.62029ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: defsScala took 0.002844ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: plugins took 2418.171236ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: defsScala took 0.005689ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory D:\FYP\RISC-V_mul_div_unit\RV64M_pre[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: mkEval took 6.834621ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: mkEval took 6.789126ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Found non-root projects [0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in D:\FYP\RISC-V_mul_div_unit\RV64M_pre, returning: ()[0m
 [0m[[0m[0mdebug[0m] [0m[0mdeducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))[0m
@@ -63,21 +63,21 @@
 [0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))[0m
 [0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))[0m
 [0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)[0m
-[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 1.53998 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 1.416535 ms[0m
 [0m[[0m[0minfo[0m] [0m[0mloading settings for project rv64m_pre from build.sbt ...[0m
-[0m[[0m[0mdebug[0m] [0m[0m        Load.resolveProject(rv64m_pre) took 4.875371ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.loadTransitive: finalizeProject(Project(id rv64m_pre, base: D:\FYP\RISC-V_mul_div_unit\RV64M_pre, plugins: List(<none>))) took 7.038283ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m        Load.resolveProject(rv64m_pre) took 3.587416ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadTransitive: finalizeProject(Project(id rv64m_pre, base: D:\FYP\RISC-V_mul_div_unit\RV64M_pre, plugins: List(<none>))) took 5.515382ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in D:\FYP\RISC-V_mul_div_unit\RV64M_pre, returning: (rv64m_pre)[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: loadedProjectsRaw took 2856.507653ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: cleanEvalClasses took 27.942645ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Load.loadUnit(file:/D:/FYP/RISC-V_mul_div_unit/RV64M_pre/, ...) took 7369.884203ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: load took 7402.23573ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: resolveProjects took 0.146773ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: finalTransforms took 13.305723ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: config.delegates took 0.433493ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: Def.make(settings)... took 100.927572ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: structureIndex took 32.96934ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: mkStreams took 0.002275ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: loadedProjectsRaw took 188.064019ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: cleanEvalClasses took 11.356738ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.loadUnit(file:/D:/FYP/RISC-V_mul_div_unit/RV64M_pre/, ...) took 2619.030146ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: load took 2650.138155ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: resolveProjects took 0.47616ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: finalTransforms took 14.74163ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: config.delegates took 0.352711ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: Def.make(settings)... took 157.774641ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: structureIndex took 41.13184ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: mkStreams took 0.002276ms[0m
 [0m[[0m[0minfo[0m] [0m[0mset current project to rv64m_pre (in build file:/D:/FYP/RISC-V_mul_div_unit/RV64M_pre/)[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(sbtPopOnFailure, None, None)[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(resumeFromFailure, None, None)[0m
