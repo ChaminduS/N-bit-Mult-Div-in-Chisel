@@ -1,13 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:46:22: value && is not a member of chisel3.UInt[0m
-[0m[[0m[31merror[0m] [0m[0m      when (io.SIGN1 && io.MULTIPLIER(63)){[0m
-[0m[[0m[31merror[0m] [0m[0m                     ^[0m
-[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:52:22: value && is not a member of chisel3.UInt[0m
-[0m[[0m[31merror[0m] [0m[0m      when (io.SIGN2 && io.MULTIPLICAND(63)){[0m
-[0m[[0m[31merror[0m] [0m[0m                     ^[0m
-[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:60:31: value && is not a member of chisel3.UInt[0m
-[0m[[0m[31merror[0m] [0m[0m      neg_output := (io.SIGN1 && io.MULTIPLIER(63)) ^ (io.SIGN2 && io.MULTIPLICAND(63))[0m
-[0m[[0m[31merror[0m] [0m[0m                              ^[0m
-[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\multiplier.scala:60:65: value && is not a member of chisel3.UInt[0m
-[0m[[0m[31merror[0m] [0m[0m      neg_output := (io.SIGN1 && io.MULTIPLIER(63)) ^ (io.SIGN2 && io.MULTIPLICAND(63))[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                ^[0m
-[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere were three feature warnings; re-run with -feature for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

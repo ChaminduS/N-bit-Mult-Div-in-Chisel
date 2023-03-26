@@ -1,6 +1,7 @@
 import chisel3._
 import chisel3.util._
-import chisel3.Driver
+
+
 
 class xor2 extends Module{
     val io = IO(new Bundle{
@@ -11,4 +12,8 @@ class xor2 extends Module{
     })
 
     io.out := io.a ^ io.b
+}
+
+object xor2_verilog extends App {
+  (new stage.ChiselStage) .emitVerilog(new xor2())
 }
