@@ -1,6 +1,7 @@
 import chisel3._
 import chisel3.util._
 
+
 class xor2 extends Module{
     val io = IO(new Bundle{
         val a = Input(UInt(1.W))
@@ -43,6 +44,30 @@ class getOnesComplement(N: Int=64) extends Module{
 
     io.onesComp := Cat(Seq.tabulate(N)(i => xor(i).io.out).reverse)
     
+}
+
+class AddSub64 extends Module{
+    val io = IO(new Bundle{
+        val cin = Input(UInt(1.W))
+        val onesComp_ip = Input(UInt(64.W))
+        val i0 = Input(UInt(64.W))
+        val sum = Output(UInt(64.W))
+    })
+
+    vall fa = Seq.fill(64)(Module(new fullAdder))
+
+    for (i <- 0 until 64){
+        when (i === 0){
+            fa(i).io.i0 := io.i0(i)
+            fa(i).io.i1 := io.onesComp_ip(0)
+            fa(i).io.cin := io.cin
+        }.otherwise{
+            fa(i).io.i0 := io.i0(i)
+            fa(i).io.i1 := io.onesComp_ip(0)
+            fa(i).io.i1 := //???????????
+        }
+    }
+
 }
 
 
