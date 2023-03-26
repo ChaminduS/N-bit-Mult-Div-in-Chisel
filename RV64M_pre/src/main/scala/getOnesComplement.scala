@@ -12,6 +12,20 @@ class xor2 extends Module{
     io.out := io.a ^ io.b
 }
 
+class fullAdder extends Module{
+    val io = IO(new Bundle{
+        val i0 = Input(UInt(1.W))
+        val i1 = Input(UInt(1.W))
+        val cin = Input(UInt(1.W))
+        val sum = Output(UInt(1.W))
+        val cout = Output(UInt(1.W))
+    })
+
+    io.sum := io.i0 ^ io.i1 ^ io.cin
+    io.cout := (io.i0 & io.i1) | (io.i1 & io.cin) | (io.cin & io.i0)
+
+}
+
 class getOnesComplement(N: Int=64) extends Module{
     val io = IO(new Bundle{
         val cin = Input(UInt(1.W))
@@ -24,11 +38,14 @@ class getOnesComplement(N: Int=64) extends Module{
     for (i<- 0 until N){
         xor(i).io.a := io.i1(i)
         xor(i).io.b := io.cin
+        // io.onesComp(i) := xor(i).io.out
     }
 
     io.onesComp := Cat(Seq.tabulate(N)(i => xor(i).io.out).reverse)
     
 }
+
+
 
 object getOnesComp extends App {
   println("Generating the Ones Complement hardware")

@@ -7,6 +7,7 @@ class getOnesComplement_tester (dut : getOnesComplement) extends PeekPokeTester(
     poke (dut.io.cin, 0.U)
     poke (dut.io.i1, 0.U)
     step (1)
+    println("Result is: " + peek(dut.io.onesComp).toString)
     expect (dut.io.onesComp, 0.U)
 
     poke (dut.io.cin, 1.U)
@@ -26,4 +27,4 @@ object getOnesComplement_tester extends App{
     chisel3.iotesters.Driver(()=>new getOnesComplement()) {c =>
         new getOnesComplement_tester(c)
     }
-
+}
