@@ -92,3 +92,8 @@
 1680196378254:test:runMain booth_multiplier_tester
 1680196483125:runMain boothMultiplier
 1680196536546:test:runMain booth_multiplier_tester
+1680196657649:run
+1680196695890:test
+1680196735678:exit
+1680196753740:test:runMain addsub_64_tester
+1680196795832:test:runMain booth_multiplier_tester

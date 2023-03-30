@@ -1,7 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\test\scala\booth_substep_tester.scala:38:21: integer number too large[0m
-[0m[[0m[31merror[0m] [0m[0m    poke (dut.io.Q,-9223372036854775808.S)[0m
-[0m[[0m[31merror[0m] [0m[0m                    ^[0m
-[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\test\scala\booth_substep_tester.scala:44:29: integer number too large[0m
-[0m[[0m[31merror[0m] [0m[0m    expect (dut.io.next_Q, -4611686018427387904.S)[0m
-[0m[[0m[31merror[0m] [0m[0m                            ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere were 21 feature warnings; re-run with -feature for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
