@@ -56,3 +56,5 @@
 1680152934713:test:runMain addsub_64_tester
 1680153327168:run
 1680153341398:test:runMain addsub_64_tester
+1680153673028:runMain addsub64
+1680153717083:runMain getOnesComp

@@ -37,7 +37,7 @@ class getOnesComplement(N: Int=64) extends Module{
 
 object getOnesComp extends App {
   println("Generating the Ones Complement hardware")
-  (new chisel3.stage.ChiselStage).emitVerilog(new getOnesComplement())
+  (new chisel3.stage.ChiselStage).emitVerilog(new getOnesComplement(), Array("--target-dir","verilog/"))
 
 }
 

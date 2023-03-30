@@ -46,6 +46,6 @@ class addsub_64 extends Module{
 
 object addsub64 extends App {
   println("Generating the 64 bit adder subtractor hardware")
-  (new chisel3.stage.ChiselStage).emitVerilog(new addsub_64())
+  (new chisel3.stage.ChiselStage).emitVerilog(new addsub_64(), Array("--target-dir","verilog/"))
 
 }

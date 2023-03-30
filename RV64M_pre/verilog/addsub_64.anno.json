@@ -398,6 +398,6 @@
   },
   {
     "class":"firrtl.transforms.BlackBoxTargetDirAnno",
-    "targetDir":"."
+    "targetDir":"verilog/"
   }
 ]
