@@ -25,8 +25,7 @@ class addsub_64 extends Module{
     })
 
     val fa = Seq.fill(64)(Module(new fullAdder))
-    // val temp = Reg(UInt(64.W))
-    // val addsubtemp = Reg(UInt(64.W))
+
 
     fa(0).io.i0 := io.i0(0)
     fa(0).io.i1 := io.onesComp_ip(0)

@@ -58,3 +58,9 @@
 1680153341398:test:runMain addsub_64_tester
 1680153673028:runMain addsub64
 1680153717083:runMain getOnesComp
+1680155689047:run "booth_substep"
+1680155856242:runMain booth_substep
+1680155870566:runMain boothSubstep
+1680156111401:run
+1680156159202:runMain boothSubstep
+1680157143355:run

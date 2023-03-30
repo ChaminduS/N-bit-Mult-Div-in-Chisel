@@ -1,6 +1,0 @@
-[0m[[0m[0mdebug[0m] [0m[0m> Exec(runMain getOnesComp, Some(db9c5f2b-a51d-43bb-a17a-693e010466d5), Some(CommandSource(console0)))[0m
-[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / runMain[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
-[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to D:\FYP\RISC-V_mul_div_unit\RV64M_pre\target\scala-2.12\classes ...[0m
-[0m[[0m[33mwarn[0m] [0m[0mthere were 9 feature warnings; re-run with -feature for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
