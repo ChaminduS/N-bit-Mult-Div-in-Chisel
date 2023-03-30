@@ -19,11 +19,11 @@ class addsub_64_tester (dut : addsub_64) extends PeekPokeTester(dut){
     expect (dut.io.sum, "hffffffffffffffff".U)
 
     poke (dut.io.cin, 1.U)
-    poke (dut.io.i0, "hf0f0f0f0f0f0f0f0".U)
-    poke (dut.io.onesComp_ip,0.U)
+    poke (dut.io.i0, 0.U)
+    poke (dut.io.onesComp_ip,"hfffffffffffffffe".U)
     step (1)
     println("Result is: " + peek(dut.io.sum).toString)
-    expect (dut.io.sum, "hf0f0f0f0f0f0f0f1".U)
+    expect (dut.io.sum, "hffffffffffffffff".U)
 
     }
 

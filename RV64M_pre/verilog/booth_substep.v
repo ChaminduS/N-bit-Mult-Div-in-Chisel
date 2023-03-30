@@ -1683,14 +1683,10 @@ module booth_substep(
   wire [63:0] _T_3 = io_acc; // @[booth_substep.scala 33:25]
   wire [63:0] _T_7 = io_Q; // @[booth_substep.scala 46:29]
   wire [63:0] addsub_temp = as0_io_sum; // @[booth_substep.scala 29:27 booth_substep.scala 34:17]
-  wire [62:0] _GEN_3 = io_Q[0] == io_q0 ? _T_7[63:1] : _T_7[63:1]; // @[booth_substep.scala 44:29 booth_substep.scala 46:21 booth_substep.scala 56:21]
+  wire [62:0] next_Q_temp = io_Q[0] == io_q0 ? _T_7[63:1] : _T_7[63:1]; // @[booth_substep.scala 44:29 booth_substep.scala 46:21 booth_substep.scala 56:21]
   wire  next_Q_MSB = io_Q[0] == io_q0 ? io_acc[0] : addsub_temp[0]; // @[booth_substep.scala 44:29 booth_substep.scala 47:20 booth_substep.scala 57:20]
-  wire [62:0] _GEN_5 = io_Q[0] == io_q0 ? _T_3[63:1] : addsub_temp[63:1]; // @[booth_substep.scala 44:29 booth_substep.scala 48:23 booth_substep.scala 58:23]
+  wire [62:0] next_acc_temp = io_Q[0] == io_q0 ? _T_3[63:1] : addsub_temp[63:1]; // @[booth_substep.scala 44:29 booth_substep.scala 48:23 booth_substep.scala 58:23]
   wire  next_acc_MSB = io_Q[0] == io_q0 ? io_acc[63] : addsub_temp[63]; // @[booth_substep.scala 44:29]
-  wire [63:0] next_Q_temp = {{1'd0}, _GEN_3}; // @[booth_substep.scala 39:27]
-  wire [64:0] _T_22 = {next_Q_MSB,next_Q_temp}; // @[booth_substep.scala 66:47]
-  wire [63:0] next_acc_temp = {{1'd0}, _GEN_5}; // @[booth_substep.scala 40:29]
-  wire [64:0] _T_24 = {next_acc_MSB,next_acc_temp}; // @[booth_substep.scala 67:53]
   getOnesComplement g0 ( // @[booth_substep.scala 17:20]
     .io_cin(g0_io_cin),
     .io_i1(g0_io_i1),
@@ -1702,8 +1698,8 @@ module booth_substep(
     .io_i0(as0_io_i0),
     .io_sum(as0_io_sum)
   );
-  assign io_next_acc = _T_24[63:0]; // @[booth_substep.scala 67:17]
-  assign io_next_Q = _T_22[63:0]; // @[booth_substep.scala 66:15]
+  assign io_next_acc = {next_acc_MSB,next_acc_temp}; // @[booth_substep.scala 67:53]
+  assign io_next_Q = {next_Q_MSB,next_Q_temp}; // @[booth_substep.scala 66:47]
   assign io_q0_next = io_Q[0] == io_q0 ? io_Q[0] : io_Q[0]; // @[booth_substep.scala 44:29 booth_substep.scala 45:20 booth_substep.scala 55:20]
   assign g0_io_cin = io_Q[0]; // @[booth_substep.scala 21:22]
   assign g0_io_i1 = io_multiplicand; // @[booth_substep.scala 22:33]

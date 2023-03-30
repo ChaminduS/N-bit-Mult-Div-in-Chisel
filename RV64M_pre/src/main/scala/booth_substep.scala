@@ -36,8 +36,8 @@ class booth_substep extends Module{
     //logic loop
 
     //temporary variables to assign to
-    val next_Q_temp = Wire(UInt(64.W))
-    val next_acc_temp = Wire(UInt(64.W))
+    val next_Q_temp = Wire(UInt(63.W))
+    val next_acc_temp = Wire(UInt(63.W))
     val next_Q_MSB = Wire(UInt(1.W))
     val next_acc_MSB = Wire(UInt(1.W))
 
