@@ -14,8 +14,8 @@
     "sink":"~booth_substep|booth_substep>io_next_acc",
     "sources":[
       "~booth_substep|booth_substep>io_q0",
-      "~booth_substep|booth_substep>io_acc",
       "~booth_substep|booth_substep>io_Q",
+      "~booth_substep|booth_substep>io_acc",
       "~booth_substep|booth_substep>io_multiplicand"
     ]
   },

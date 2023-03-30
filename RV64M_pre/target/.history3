@@ -64,3 +64,12 @@
 1680156111401:run
 1680156159202:runMain boothSubstep
 1680157143355:run
+1680158335153:test:runMain booth_substep_tester
+1680158399446:test
+1680158424885:test:runMain booth_substep_tester
+1680158442138:test:runMain addsub_64_tester
+1680158545442:test:runMain booth_substep_tester
+1680159752755:runMain boothSubstep
+1680159997000:test:runMain booth_substep_tester
+1680160234903:runMain boothSubstep
+1680160501377:test:runMain booth_substep_tester

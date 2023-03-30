@@ -1,14 +1,15 @@
 import chisel3._
 import chisel3.util._
+//import common._
 
 class booth_substep extends Module{
     val io = IO(new Bundle{
-        val acc = Input(UInt(64.W))
-        val Q = Input(UInt(64.W))
+        val acc = Input(SInt(64.W))
+        val Q = Input(SInt(64.W))
         val q0 = Input(UInt(1.W))
-        val multiplicand = Input(UInt(64.W))
-        val next_acc = Output(UInt(64.W))
-        val next_Q = Output(UInt(64.W))
+        val multiplicand = Input(SInt(64.W))
+        val next_acc = Output(SInt(64.W))
+        val next_Q = Output(SInt(64.W))
         val q0_next = Output(UInt(1.W))
     })
 
@@ -17,8 +18,8 @@ class booth_substep extends Module{
 
     val int_ip = Wire(UInt(64.W))   //Output to be fed into the 64 bit adder subtractor
 
-    g0.io.cin := io.Q(0)
-    g0.io.i1 := io.multiplicand 
+    g0.io.cin := io.Q(0).asUInt
+    g0.io.i1 := io.multiplicand.asUInt 
     int_ip := g0.io.onesComp
 
 
@@ -27,9 +28,9 @@ class booth_substep extends Module{
 
     val addsub_temp = Wire(UInt(64.W))  //Output to be used in the logic loop
 
-    as0.io.cin := io.Q(0)
+    as0.io.cin := io.Q(0).asUInt
     as0.io.onesComp_ip := int_ip
-    as0.io.i0 := io.acc
+    as0.io.i0 := io.acc.asUInt
     addsub_temp := as0.io.sum
 
     //logic loop
@@ -42,9 +43,9 @@ class booth_substep extends Module{
 
     when (io.Q(0) === io.q0){
         io.q0_next := io.Q(0)
-        next_Q_temp := io.Q >> 1
-        next_Q_MSB := io.acc(0)
-        next_acc_temp := io.acc >> 1
+        next_Q_temp := io.Q.asUInt >> 1
+        next_Q_MSB := io.acc(0).asUInt
+        next_acc_temp := io.acc.asUInt >> 1
         when (io.acc(63) === 1.U){
             next_acc_MSB := 1.U
         }.otherwise{
@@ -52,7 +53,7 @@ class booth_substep extends Module{
         }
     }.otherwise{
         io.q0_next := io.Q(0)
-        next_Q_temp := io.Q >> 1
+        next_Q_temp := io.Q.asUInt >> 1
         next_Q_MSB := addsub_temp(0)
         next_acc_temp := addsub_temp >> 1
         when (addsub_temp(63) === 1.U){
@@ -62,8 +63,8 @@ class booth_substep extends Module{
         }
     }
 
-    io.next_Q := Cat(next_Q_MSB, next_Q_temp)
-    io.next_acc := Cat(next_acc_MSB, next_acc_temp)
+    io.next_Q := Cat(next_Q_MSB, next_Q_temp).asSInt
+    io.next_acc := Cat(next_acc_MSB, next_acc_temp).asSInt
 
 }
 
