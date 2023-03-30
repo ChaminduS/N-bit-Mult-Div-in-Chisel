@@ -1,2 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0mthere were 20 feature warnings; re-run with -feature for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\RV64M_pre\src\main\scala\getOnesComplement.scala:83:3: not found: value emitVerilog[0m
+[0m[[0m[31merror[0m] [0m[0m  emitVerilog(new getOnesComplement())[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

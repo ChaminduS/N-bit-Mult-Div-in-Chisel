@@ -13,19 +13,19 @@ class xor2 extends Module{
     io.out := io.a ^ io.b
 }
 
-class fullAdder extends Module{
-    val io = IO(new Bundle{
-        val i0 = Input(UInt(1.W))
-        val i1 = Input(UInt(1.W))
-        val cin = Input(UInt(1.W))
-        val sum = Output(UInt(1.W))
-        val cout = Output(UInt(1.W))
-    })
+// class fullAdder extends Module{
+//     val io = IO(new Bundle{
+//         val i0 = Input(UInt(1.W))
+//         val i1 = Input(UInt(1.W))
+//         val cin = Input(UInt(1.W))
+//         val sum = Output(UInt(1.W))
+//         val cout = Output(UInt(1.W))
+//     })
 
-    io.sum := io.i0 ^ io.i1 ^ io.cin
-    io.cout := (io.i0 & io.i1) | (io.i1 & io.cin) | (io.cin & io.i0)
+//     io.sum := io.i0 ^ io.i1 ^ io.cin
+//     io.cout := (io.i0 & io.i1) | (io.i1 & io.cin) | (io.cin & io.i0)
 
-}
+// }
 
 class getOnesComplement(N: Int=64) extends Module{
     val io = IO(new Bundle{
@@ -46,29 +46,35 @@ class getOnesComplement(N: Int=64) extends Module{
     
 }
 
-class AddSub64 extends Module{
-    val io = IO(new Bundle{
-        val cin = Input(UInt(1.W))
-        val onesComp_ip = Input(UInt(64.W))
-        val i0 = Input(UInt(64.W))
-        val sum = Output(UInt(64.W))
-    })
+// class addsub_64 extends Module{
+//     val io = IO(new Bundle{
+//         val cin = Input(UInt(1.W))
+//         val onesComp_ip = Input(UInt(64.W))
+//         val i0 = Input(UInt(64.W))
+//         val sum = Output(UInt(64.W))
+//     })
 
-    vall fa = Seq.fill(64)(Module(new fullAdder))
+//     val fa = Seq.fill(64)(Module(new fullAdder))
+//     val temp = Reg(UInt(64.W))
+//     val addsubtemp = Reg(UInt(64.W))
 
-    for (i <- 0 until 64){
-        when (i === 0){
-            fa(i).io.i0 := io.i0(i)
-            fa(i).io.i1 := io.onesComp_ip(0)
-            fa(i).io.cin := io.cin
-        }.otherwise{
-            fa(i).io.i0 := io.i0(i)
-            fa(i).io.i1 := io.onesComp_ip(0)
-            fa(i).io.i1 := //???????????
-        }
-    }
+//     fa(0).io.i0 := io.i0(0)
+//     fa(0).io.i1 := io.onesComp_ip(0)
+//     fa(0).io.cin := io.cin
+//     temp(0) := fa(0).io.cout
+//     addsubtemp(0) := fa(0).io.sum
 
-}
+//     for (i <- 1 until 64){
+//         fa(i).io.i0 := io.i0(i)
+//         fa(i).io.i1 := io.onesComp_ip(0)
+//         fa(i).io.cin := temp(i-1)
+//         temp(i) := fa(i).io.cout
+//         addsubtemp(i) := fa(i).io.sum
+//     }
+    
+//     io.sum := addsubtemp
+
+// }
 
 
 
@@ -77,3 +83,4 @@ object getOnesComp extends App {
   (new chisel3.stage.ChiselStage).emitVerilog(new getOnesComplement())
 
 }
+

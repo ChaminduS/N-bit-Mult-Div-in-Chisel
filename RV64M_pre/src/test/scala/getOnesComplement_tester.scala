@@ -13,12 +13,14 @@ class getOnesComplement_tester (dut : getOnesComplement) extends PeekPokeTester(
     poke (dut.io.cin, 1.U)
     poke (dut.io.i1, 0.U)
     step (1)
-    expect (dut.io.onesComp, "hffffffff".U)
+    println("Result is: " + peek(dut.io.onesComp).toString)
+    expect (dut.io.onesComp, "hffffffffffffffff".U)
 
     poke (dut.io.cin, 1.U)
-    poke (dut.io.i1, "hf0f0f0f0f".U)
+    poke (dut.io.i1, "hf0f0f0f0f0f0f0f0".U)
     step (1)
-    expect (dut.io.onesComp, "h0f0f0f0f".U)
+    println("Result is: " + peek(dut.io.onesComp).toString)
+    expect (dut.io.onesComp, "h0f0f0f0f0f0f0f0f".U)
 
 
     }
