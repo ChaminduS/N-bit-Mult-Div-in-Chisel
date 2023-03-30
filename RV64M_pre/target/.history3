@@ -86,3 +86,9 @@
 1680186595847:test:runMain booth_substep_tester
 1680186764298:runMain boothSubstep
 1680194692336:runMain boothMultiplier
+1680196250769:test:runMain booth_multiplier_tester
+1680196298394:exit
+1680196359629:test
+1680196378254:test:runMain booth_multiplier_tester
+1680196483125:runMain boothMultiplier
+1680196536546:test:runMain booth_multiplier_tester
