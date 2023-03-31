@@ -4,7 +4,7 @@ import chisel3.util._
 class booth_divider extends Module{
     val io = IO(new Bundle{
         val dividend = Input(SInt(64.W))
-        val divisor  = Input(SInt(64.W))
+        val divisor  = Input(SInt(64.W))  //M
         val quotient = Output(SInt(64.W))
         val remainder= Output(SInt(64.W))        
     })
