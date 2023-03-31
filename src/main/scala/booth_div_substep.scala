@@ -32,19 +32,34 @@ class booth_div_substep extends Module{
     val as1 = Module(new(addsub_64))
 
     val sub_temp = Wire(UInt(64.W))
+    val c_temp   = Wire(UInt(1.W))
 
     as1.io.cin := 1.U
     as1.io.onesComp_ip := int_ip
     as1.io.i0 := Cat(shiftedA(63,1),shiftedA_LSB)
     sub_temp := as1.io.sum          //sub_temp will hold the value of A-M
+    c_temp   := as1.io.cout
 
-    //logic loop
-    when (sub_temp(63) === 1.U){
-        shiftedQ_LSB := 0.U 
-        Aout         := Cat(shiftedA(63,1),shiftedA_LSB)
+    // //logic loop
+    // when (sub_temp(63) === 1.U){
+    //     shiftedQ_LSB := 0.U 
+    //     Aout         := Cat(shiftedA(63,1),shiftedA_LSB)
+    // }.otherwise{
+    //     shiftedQ_LSB := 1.U
+    //     Aout         := sub_temp
+    // }
+
+    when (shiftedA(64) === 0.U){
+        when (c_temp === 0.U){
+            Aout            := Cat(shiftedA(63,1),shiftedA_LSB)
+            shiftedQ_LSB    := 0.U
+        }.otherwise{
+            shiftedQ_LSB    := 1.U
+            Aout            := sub_temp
+        }
     }.otherwise{
-        shiftedQ_LSB := 1.U
-        Aout         := sub_temp
+        Aout            := sub_temp
+        shiftedQ_LSB    := 1.U
     }
 
     io.next_acc := Aout.asSInt
