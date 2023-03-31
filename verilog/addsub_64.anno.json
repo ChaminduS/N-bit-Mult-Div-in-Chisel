@@ -9,6 +9,15 @@
     ]
   },
   {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~addsub_64|addsub_64>io_cout",
+    "sources":[
+      "~addsub_64|addsub_64>io_i0",
+      "~addsub_64|addsub_64>io_onesComp_ip",
+      "~addsub_64|addsub_64>io_cin"
+    ]
+  },
+  {
     "class":"firrtl.transforms.DedupedResult",
     "original":"~addsub_64|fullAdder",
     "duplicate":"~addsub_64|addsub_64/fa_0:fullAdder",

@@ -25,6 +25,20 @@ class booth_div_substep_tester (dut : booth_div_substep) extends PeekPokeTester(
     expect (dut.io.next_acc, 30.U) //Restored -> 30
     expect (dut.io.next_Q, 480.U) //480
 
+    poke (dut.io.acc, "b1110".U) 
+    poke (dut.io.Q,"h0".U) 
+    poke (dut.io.divisor,"b10001".U) 
+    step (1)
+    expect (dut.io.next_acc, "b01011".U) 
+    expect (dut.io.next_Q, "b00001".U) 
+
+    poke (dut.io.acc, "b01010".U) 
+    poke (dut.io.Q,"b00110".U) 
+    poke (dut.io.divisor,"b10001".U) 
+    step (1)
+    expect (dut.io.next_acc, "b00011".U) 
+    expect (dut.io.next_Q, "b01101".U) 
+
     }
 
 object booth_div_substep_tester extends App{

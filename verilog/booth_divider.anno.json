@@ -1,7 +1,7 @@
 [
   {
     "class":"firrtl.transforms.CombinationalPath",
-    "sink":"~booth_divider|booth_divider>io_quotient",
+    "sink":"~booth_divider|booth_divider>io_remainder",
     "sources":[
       "~booth_divider|booth_divider>io_divisor",
       "~booth_divider|booth_divider>io_dividend"
@@ -9,9 +9,10 @@
   },
   {
     "class":"firrtl.transforms.CombinationalPath",
-    "sink":"~booth_divider|booth_divider>io_remainder",
+    "sink":"~booth_divider|booth_divider>io_quotient",
     "sources":[
-      "~booth_divider|booth_divider>io_divisor"
+      "~booth_divider|booth_divider>io_divisor",
+      "~booth_divider|booth_divider>io_dividend"
     ]
   },
   {

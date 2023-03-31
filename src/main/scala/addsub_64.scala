@@ -22,6 +22,7 @@ class addsub_64 extends Module{
         val onesComp_ip = Input(UInt(64.W))
         val i0 = Input(UInt(64.W))
         val sum = Output(UInt(64.W))
+        val cout = Output(UInt(1.W))
     })
 
     val fa = Seq.fill(64)(Module(new fullAdder))
@@ -40,6 +41,7 @@ class addsub_64 extends Module{
     
     
     io.sum := Cat(Seq.tabulate(64)(i => fa(i).io.sum).reverse)
+    io.cout := fa(63).io.cout
 
 }
 
