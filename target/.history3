@@ -113,3 +113,4 @@
 1680263152115:test:runMain booth_divider_tester
 1680263251493:test:runMain booth_div_substep_tester
 1680263936256:test:runMain booth_divider_tester
+1680452665726:test:runMain booth_multiplier_tester
