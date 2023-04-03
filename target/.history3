@@ -7,3 +7,6 @@
 1680493951093:test:runMain addsub_32_testr
 1680493955625:test:runMain addsub_32_tester
 1680494007329:test:runMain getOnesComplement_tester
+1680494332746:runMain boothSubstep
+1680494400108:runMain boothDivSubstep
+1680494857025:test:runMain booth_div_substep_tester
