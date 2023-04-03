@@ -2,3 +2,8 @@
 1680486317373:test:runMain booth_divider_tester
 1680486346233:test:runMain booth_div_substep_tester
 1680486456542:test:runMain booth_divider_tester
+1680493885563:test:runMain addsub_32_tester
+1680493908959:runMain addsub32
+1680493951093:test:runMain addsub_32_testr
+1680493955625:test:runMain addsub_32_tester
+1680494007329:test:runMain getOnesComplement_tester
