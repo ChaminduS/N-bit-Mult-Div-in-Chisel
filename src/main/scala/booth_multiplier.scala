@@ -20,7 +20,7 @@ class booth_multiplier extends Module{
     acc(0) := 0.S
     Q(0) := io.multiplier
 
-    val bs = Seq.fill(64)(Module(new booth_substep))
+    val bs = Seq.fill(64)(Module(new booth_mult_substep))
 
     for (i <- 0 until 63){
         bs(i).io.acc := acc(i)

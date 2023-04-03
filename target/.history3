@@ -13,3 +13,4 @@
 1680496344773:runMain booth_divider
 1680497285412:runMain boothDivider
 1680498551475:test:runMain booth_divider_tester
+1680499648369:test:runMain booth_multiplier_tester

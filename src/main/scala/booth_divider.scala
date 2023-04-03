@@ -38,7 +38,7 @@ class booth_divider extends Module{
         divisor_in := io.divisor.asUInt
     }      
     
-    
+    //Initiate : division algorithm
     val Q = Wire(Vec(32,UInt(32.W)))
     val acc = Wire(Vec(32,UInt(32.W)))
     
@@ -64,7 +64,7 @@ class booth_divider extends Module{
     quotientTemp            := bds(31).io.next_Q
     remainderTemp           := bds(31).io.next_acc
 
-
+    //End : Division Algorithm
 
     io.quotient := Mux((neg_quotient===1.U) , ~quotientTemp + 1.U , quotientTemp).asSInt
     io.remainder:= Mux((io.signed === 1.U) & (io.dividend(31) === 1.U), ~remainderTemp + 1.U , remainderTemp).asSInt
