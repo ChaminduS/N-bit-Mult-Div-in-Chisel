@@ -3,11 +3,11 @@ import chisel3.util._
 
 class booth_div_substep extends Module{
     val io = IO(new Bundle{
-        val acc = Input(SInt(32.W))         //A
-        val Q = Input(SInt(32.W))           
-        val divisor = Input(SInt(32.W))     //M
-        val next_acc = Output(SInt(32.W))
-        val next_Q = Output(SInt(32.W))
+        val acc = Input(UInt(32.W))         //A
+        val Q = Input(UInt(32.W))           
+        val divisor = Input(UInt(32.W))     //M
+        val next_acc = Output(UInt(32.W))
+        val next_Q = Output(UInt(32.W))
     })
 
     val g1 = Module(new getOnesComplement(32))
@@ -15,7 +15,7 @@ class booth_div_substep extends Module{
     val int_ip = Wire(UInt(32.W))
 
     g1.io.cin := 1.U
-    g1.io.i1 := io.divisor.asUInt
+    g1.io.i1 := io.divisor
     int_ip := g1.io.onesComp
 
     //left shift before sending to the adder
@@ -25,9 +25,9 @@ class booth_div_substep extends Module{
     val shiftedQ_LSB = Wire(UInt(1.W))
     val Aout = Wire(UInt(32.W))
 
-    shiftedA := io.acc.asUInt << 1
+    shiftedA := io.acc << 1
     shiftedA_LSB := io.Q(31)
-    shiftedQ := io.Q.asUInt << 1
+    shiftedQ := io.Q << 1
 
     val as1 = Module(new(addsub_32))
 
@@ -47,8 +47,8 @@ class booth_div_substep extends Module{
         Aout         := sub_temp
     }
 
-    io.next_acc := Aout.asSInt
-    io.next_Q   := Cat(shiftedQ(31,1),shiftedQ_LSB).asSInt
+    io.next_acc := Aout
+    io.next_Q   := Cat(shiftedQ(31,1),shiftedQ_LSB)
 }
 
 object boothDivSubstep extends App {
