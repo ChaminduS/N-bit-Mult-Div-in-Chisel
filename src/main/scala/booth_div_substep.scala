@@ -38,30 +38,10 @@ class booth_div_substep extends Module{
     sub_temp := as1.io.sum          //sub_temp will hold the value of A-M
     c_temp   := as1.io.cout
 
-<<<<<<< HEAD
-    // //logic loop
-    // when (sub_temp(63) === 1.U){
-    //     shiftedQ_LSB := 0.U 
-    //     Aout         := Cat(shiftedA(63,1),shiftedA_LSB)
-    // }.otherwise{
-    //     shiftedQ_LSB := 1.U
-    //     Aout         := sub_temp
-    // }
-
-    when (shiftedA(64) === 0.U){
-        when (c_temp === 0.U){
-            Aout            := Cat(shiftedA(63,1),shiftedA_LSB)
-            shiftedQ_LSB    := 0.U
-        }.otherwise{
-            shiftedQ_LSB    := 1.U
-            Aout            := sub_temp
-        }
-=======
     //logic loop
     when (sub_temp(63) === 1.U){
         shiftedQ_LSB := 0.U 
         Aout         := shiftedA(63,0)
->>>>>>> parent of f13560f (Divison works for positive number only.)
     }.otherwise{
         Aout            := sub_temp
         shiftedQ_LSB    := 1.U

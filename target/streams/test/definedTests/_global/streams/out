@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-[0m[[0m[0mdebug[0m] [0m[0mSubclass fingerprints: List((org.scalacheck.Properties,false,org.scalacheck.ScalaCheckFramework$$anon$5@49c2ea9b), (org.scalacheck.Prop,false,org.scalacheck.ScalaCheckFramework$$anon$5@2fa66965), (org.scalacheck.Properties,true,org.scalacheck.ScalaCheckFramework$$anon$5@457f694a), (org.scalacheck.Prop,true,org.scalacheck.ScalaCheckFramework$$anon$5@a4bad9a), (org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@5403187a))[0m
-[0m[[0m[0mdebug[0m] [0m[0mAnnotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@4872bede))[0m
-=======
-[0m[[0m[0mdebug[0m] [0m[0mSubclass fingerprints: List((org.scalacheck.Properties,false,org.scalacheck.ScalaCheckFramework$$anon$5@4d4b61ad), (org.scalacheck.Prop,false,org.scalacheck.ScalaCheckFramework$$anon$5@4bbe2e89), (org.scalacheck.Properties,true,org.scalacheck.ScalaCheckFramework$$anon$5@39ba054f), (org.scalacheck.Prop,true,org.scalacheck.ScalaCheckFramework$$anon$5@7c56f946), (org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@6a86b968))[0m
-[0m[[0m[0mdebug[0m] [0m[0mAnnotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@50f608d7))[0m
->>>>>>> parent of f13560f (Divison works for positive number only.)
+[0m[[0m[0mdebug[0m] [0m[0mSubclass fingerprints: List((org.scalacheck.Properties,false,org.scalacheck.ScalaCheckFramework$$anon$5@5bd06f55), (org.scalacheck.Prop,false,org.scalacheck.ScalaCheckFramework$$anon$5@58ab9f1e), (org.scalacheck.Properties,true,org.scalacheck.ScalaCheckFramework$$anon$5@2ace285c), (org.scalacheck.Prop,true,org.scalacheck.ScalaCheckFramework$$anon$5@1516dc0), (org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@59a31078))[0m
+[0m[[0m[0mdebug[0m] [0m[0mAnnotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@6a37807))[0m
