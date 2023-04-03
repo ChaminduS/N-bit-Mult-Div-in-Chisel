@@ -20,7 +20,7 @@ class booth_divider_tester (dut : booth_divider) extends PeekPokeTester(dut){
     poke (dut.io.divisor,"b0011".U)
     step (1)
     expect (dut.io.quotient, 4.U)
-    expect (dut.io.remainder, 1.U)
+    expect (dut.io.remainder, 2.U)
 
     }
 

@@ -21,30 +21,30 @@ class booth_div_substep extends Module{
     //left shift before sending to the adder
     val shiftedA = Wire(UInt(65.W))
     val shiftedQ = Wire(UInt(65.W))
+    val shiftedA_LSB = Wire(UInt(1.W))
     val shiftedQ_LSB = Wire(UInt(1.W))
     val Aout = Wire(UInt(64.W))
 
     shiftedA := io.acc.asUInt << 1
+    shiftedA_LSB := io.Q(63)
     shiftedQ := io.Q.asUInt << 1
 
     val as1 = Module(new(addsub_64))
 
     val sub_temp = Wire(UInt(64.W))
-    val c_temp   = Wire(UInt(1.W))
 
     as1.io.cin := 1.U
     as1.io.onesComp_ip := int_ip
-    as1.io.i0 := shiftedA(63,0)
+    as1.io.i0 := Cat(shiftedA(63,1),shiftedA_LSB)
     sub_temp := as1.io.sum          //sub_temp will hold the value of A-M
-    c_temp   := as1.io.cout
 
     //logic loop
     when (sub_temp(63) === 1.U){
         shiftedQ_LSB := 0.U 
-        Aout         := shiftedA(63,0)
+        Aout         := Cat(shiftedA(63,1),shiftedA_LSB)
     }.otherwise{
-        Aout            := sub_temp
-        shiftedQ_LSB    := 1.U
+        shiftedQ_LSB := 1.U
+        Aout         := sub_temp
     }
 
     io.next_acc := Aout.asSInt
