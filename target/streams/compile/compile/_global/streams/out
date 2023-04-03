@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 [0m[[0m[33mwarn[0m] [0m[0mthere were 32 feature warnings; re-run with -feature for details[0m
+=======
+[0m[[0m[33mwarn[0m] [0m[0mthere were 15 feature warnings; re-run with -feature for details[0m
+>>>>>>> parent of f13560f (Divison works for positive number only.)
 [0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

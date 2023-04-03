@@ -102,6 +102,7 @@
 1680233075913:test:runMain booth_div_substep_tester
 1680236401999:runMain booth_divider
 1680236469188:runMain boothDivider
+<<<<<<< HEAD
 1680239846495:test:runMain booth_multiplier_tester
 1680239913351:test:runMain booth_divider_tester
 1680242917275:test:runMain booth_multiplier_tester
@@ -114,3 +115,5 @@
 1680263251493:test:runMain booth_div_substep_tester
 1680263936256:test:runMain booth_divider_tester
 1680452665726:test:runMain booth_multiplier_tester
+=======
+>>>>>>> parent of f13560f (Divison works for positive number only.)

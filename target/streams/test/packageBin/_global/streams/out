@@ -1,1 +1,37 @@
+<<<<<<< HEAD
 [0m[[0m[0mdebug[0m] [0m[0mJar uptodate: D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\risc-v_mul_div_unit_2.12-0.1.0-SNAPSHOT-tests.jar[0m
+=======
+[0m[[0m[0mdebug[0m] [0m[0mPackaging D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\risc-v_mul_div_unit_2.12-0.1.0-SNAPSHOT-tests.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	addsub_64_tester$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\addsub_64_tester$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	addsub_64_tester$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\addsub_64_tester$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	addsub_64_tester.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\addsub_64_tester.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	booth_div_substep_tester$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\booth_div_substep_tester$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	booth_div_substep_tester$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\booth_div_substep_tester$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	booth_div_substep_tester.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\booth_div_substep_tester.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	booth_multiplier_tester$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\booth_multiplier_tester$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	booth_multiplier_tester$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\booth_multiplier_tester$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	booth_multiplier_tester.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\booth_multiplier_tester.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	booth_substep_tester$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\booth_substep_tester$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	booth_substep_tester$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\booth_substep_tester$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	booth_substep_tester.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\booth_substep_tester.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	getOnesComplement_tester$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\getOnesComplement_tester$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	getOnesComplement_tester$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\getOnesComplement_tester$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	getOnesComplement_tester.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\test-classes\getOnesComplement_tester.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
+>>>>>>> parent of f13560f (Divison works for positive number only.)
