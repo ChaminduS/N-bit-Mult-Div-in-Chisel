@@ -16,7 +16,7 @@ class booth_mult_substep(N:Int) extends Module{
     //initiating getOnesComplement module and making the connections
     val g0 = Module(new(getOnesComplement))
 
-    val int_ip = Wire(UInt(64.W))   //Output to be fed into the 64 bit adder subtractor
+    val int_ip = Wire(UInt(N.W))   //Output to be fed into the 64 bit adder subtractor
 
     g0.io.cin := io.Q(0).asUInt
     g0.io.i1 := io.multiplicand.asUInt 
@@ -24,9 +24,9 @@ class booth_mult_substep(N:Int) extends Module{
 
 
     //initating the addsub_64 module and making the connections
-    val as0 = Module(new addsub(64))
+    val as0 = Module(new addsub(N))
 
-    val addsub_temp = Wire(UInt(64.W))  //Output to be used in the logic loop
+    val addsub_temp = Wire(UInt(N.W))  //Output to be used in the logic loop
 
     as0.io.cin := io.Q(0).asUInt
     as0.io.onesComp_ip := int_ip
@@ -36,8 +36,8 @@ class booth_mult_substep(N:Int) extends Module{
     //logic loop
 
     //temporary variables to assign to
-    val next_Q_temp = Wire(UInt(63.W))
-    val next_acc_temp = Wire(UInt(63.W))
+    val next_Q_temp = Wire(UInt((N-1).W))
+    val next_acc_temp = Wire(UInt((N-1).W))
     val next_Q_MSB = Wire(UInt(1.W))
     val next_acc_MSB = Wire(UInt(1.W))
 
@@ -46,7 +46,7 @@ class booth_mult_substep(N:Int) extends Module{
         next_Q_temp := io.Q.asUInt >> 1
         next_Q_MSB := io.acc(0).asUInt
         next_acc_temp := io.acc.asUInt >> 1
-        when (io.acc(63) === 1.U){
+        when (io.acc(N-1) === 1.U){
             next_acc_MSB := 1.U
         }.otherwise{
             next_acc_MSB := 0.U
@@ -56,7 +56,7 @@ class booth_mult_substep(N:Int) extends Module{
         next_Q_temp := io.Q.asUInt >> 1
         next_Q_MSB := addsub_temp(0)
         next_acc_temp := addsub_temp >> 1
-        when (addsub_temp(63) === 1.U){
+        when (addsub_temp(N-1) === 1.U){
             next_acc_MSB := 1.U
         }.otherwise{
             next_acc_MSB := 0.U
@@ -70,6 +70,6 @@ class booth_mult_substep(N:Int) extends Module{
 
 object boothMultSubstep extends App {
   println("Generating the Booth Multiplier Substep hardware")
-  (new chisel3.stage.ChiselStage).emitVerilog(new booth_mult_substep(), Array("--target-dir","verilog/"))
+  (new chisel3.stage.ChiselStage).emitVerilog(new booth_mult_substep(64), Array("--target-dir","verilog/"))
 
 }

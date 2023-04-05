@@ -16,7 +16,7 @@ class booth_multiplier_tester (dut : booth_multiplier) extends PeekPokeTester(du
     //println("Result is: " + peek(dut.io.sum).toString)
     expect (dut.io.product, 0.U)
 
-    poke (dut.io.multiplier, "hffffffffffffffff".U)
+    poke (dut.io.multiplier, "hfffffff".U)
     poke (dut.io.multiplicand,0.U)
     step (1)
     //println("Result is: " + peek(dut.io.sum).toString)
@@ -49,7 +49,7 @@ class booth_multiplier_tester (dut : booth_multiplier) extends PeekPokeTester(du
     }
 
 object booth_multiplier_tester extends App{
-    chisel3.iotesters.Driver(()=>new booth_multiplier()) {c =>
+    chisel3.iotesters.Driver(()=>new booth_multiplier(32)) {c =>
         new booth_multiplier_tester(c)
     }
 }

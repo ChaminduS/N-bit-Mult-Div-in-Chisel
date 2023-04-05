@@ -42,7 +42,7 @@ class booth_div_substep_tester (dut : booth_div_substep) extends PeekPokeTester(
     }
 
 object booth_div_substep_tester extends App{
-    chisel3.iotesters.Driver(()=>new booth_div_substep()) {c =>
+    chisel3.iotesters.Driver(()=>new booth_div_substep(64)) {c =>
         new booth_div_substep_tester(c)
     }
 }
