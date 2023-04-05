@@ -1,0 +1,11 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(runMain addsub32, Some(a56371d5-34b6-4a45-836b-24675d34f971), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / runMain[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 7 Scala sources to D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\src\main\scala\lib\booth_mult_substep.scala:27:26: not found: type addsub_64[0m
+[0m[[0m[31merror[0m] [0m[0m    val as0 = Module(new(addsub_64))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 1 s, completed Apr 5, 2023, 6:26:49 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

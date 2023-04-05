@@ -1,0 +1,14 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(0eac4c32-6ba6-4d65-8f53-ff6a1c63e877), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 6 Scala sources to D:\FYP\RISC-V_mul_div_unit\target\scala-2.12\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\src\main\scala\booth_div_substep.scala:13:25: not found: type getOnesComplement[0m
+[0m[[0m[31merror[0m] [0m[0m    val g1 = Module(new getOnesComplement(N))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\FYP\RISC-V_mul_div_unit\src\main\scala\booth_mult_substep.scala:17:25: not found: type getOnesComplement[0m
+[0m[[0m[31merror[0m] [0m[0m    val g0 = Module(new(getOnesComplement))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 1 s, completed Apr 5, 2023, 6:38:53 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

@@ -11,7 +11,7 @@ class booth_divider_tester (dut : booth_divider) extends PeekPokeTester(dut){
     expect (dut.io.quotient, 1.U)
     expect (dut.io.remainder, 0.U)
 
-    poke (dut.io.signed, 1.U)
+    poke (dut.io.signed, 0.U)
     poke (dut.io.dividend, 7.U)
     poke (dut.io.divisor,3.U)
     step (1)
@@ -56,7 +56,7 @@ class booth_divider_tester (dut : booth_divider) extends PeekPokeTester(dut){
     }
 
 object booth_divider_tester extends App{
-    chisel3.iotesters.Driver(()=>new booth_divider()) {c =>
+    chisel3.iotesters.Driver(()=>new booth_divider(64)) {c =>
         new booth_divider_tester(c)
     }
 }
