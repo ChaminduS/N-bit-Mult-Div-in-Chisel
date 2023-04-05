@@ -56,7 +56,7 @@ class booth_divider_tester (dut : booth_divider) extends PeekPokeTester(dut){
     }
 
 object booth_divider_tester extends App{
-    chisel3.iotesters.Driver(()=>new booth_divider(64)) {c =>
+    chisel3.iotesters.Driver(()=>new booth_divider(32)) {c =>
         new booth_divider_tester(c)
     }
 }

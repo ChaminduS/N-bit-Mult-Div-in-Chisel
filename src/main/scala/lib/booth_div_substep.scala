@@ -21,8 +21,8 @@ class booth_div_substep(N:Int) extends Module{
     //left shift before sending to the adder
     val shiftedA = Wire(UInt((N+1).W))
     val shiftedQ = Wire(UInt((N+1).W))
-    val shiftedA_LSB = Wire(UInt((N+1).W))
-    val shiftedQ_LSB = Wire(UInt((N+1).W))
+    val shiftedA_LSB = Wire(UInt(1.W))
+    val shiftedQ_LSB = Wire(UInt(1.W))
     val Aout = Wire(UInt((N+1).W))
 
     shiftedA := io.acc << 1
@@ -55,4 +55,4 @@ object boothDivSubstep extends App {
   println("Generating the Booth Division Substep hardware")
   (new chisel3.stage.ChiselStage).emitVerilog(new booth_div_substep(32), Array("--target-dir","verilog/"))
 
-}
+} 

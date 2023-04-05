@@ -49,7 +49,7 @@ class booth_multiplier_tester (dut : booth_multiplier) extends PeekPokeTester(du
     }
 
 object booth_multiplier_tester extends App{
-    chisel3.iotesters.Driver(()=>new booth_multiplier(32)) {c =>
+    chisel3.iotesters.Driver(()=>new booth_multiplier(64)) {c =>
         new booth_multiplier_tester(c)
     }
 }
