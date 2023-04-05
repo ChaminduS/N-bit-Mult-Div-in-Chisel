@@ -1,6 +1,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] IncrementalCompile -----------[0m
 [0m[[0m[0mdebug[0m] [0m[0mIncrementalCompile.incrementalCompile[0m
-[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 40 products, 7 sources, 4 libraries[0m
-[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/getOnesComplement.scala, ${BASE}/src/main/scala/addsub_64.scala, ${BASE}/src/main/scala/booth_divider.scala, ${BASE}/src/main/scala/booth_mult_substep.scala, ${BASE}/src/main/scala/booth_div_substep.scala, ${BASE}/src/main/scala/addsub_32.scala, ${BASE}/src/main/scala/booth_multiplier.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 34 products, 6 sources, 4 libraries[0m
+[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/lib/booth_mult_substep.scala, ${BASE}/src/main/scala/lib/addsub.scala, ${BASE}/src/main/scala/booth_divider.scala, ${BASE}/src/main/scala/lib/getOnesComplement.scala, ${BASE}/src/main/scala/lib/booth_div_substep.scala, ${BASE}/src/main/scala/booth_multiplier.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())[0m
 [0m[[0m[0mdebug[0m] [0m[0mNo changes[0m
