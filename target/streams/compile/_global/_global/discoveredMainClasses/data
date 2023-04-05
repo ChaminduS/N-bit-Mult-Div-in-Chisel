@@ -1,1 +1,1 @@
-["addsub64","boothDivSubstep","boothDivider","boothMultiplier","boothSubstep","getOnesComp"]
+["addsub32","addsub64","boothDivSubstep","boothDivider","boothMultSubstep","boothMultiplier","getOnesComp"]

@@ -4,23 +4,54 @@ import chisel3.Driver
 import chisel3.iotesters._
 
 class booth_divider_tester (dut : booth_divider) extends PeekPokeTester(dut){
+    poke (dut.io.signed, 0.U)
     poke (dut.io.dividend, 1.U)
     poke (dut.io.divisor,1.U)
     step (1)
     expect (dut.io.quotient, 1.U)
     expect (dut.io.remainder, 0.U)
 
-    poke (dut.io.dividend, 122.U)
-    poke (dut.io.divisor,10.U)
+    poke (dut.io.signed, 1.U)
+    poke (dut.io.dividend, 7.U)
+    poke (dut.io.divisor,3.U)
     step (1)
-    expect (dut.io.quotient, 12.U)
+    expect (dut.io.quotient, 2.U)
+    expect (dut.io.remainder, 1.U)
+
+    poke (dut.io.signed, 1.U)
+    poke (dut.io.dividend, "b01110".U)
+    poke (dut.io.divisor,"b0011".U)
+    step (1)
+    expect (dut.io.quotient, 4.U)
     expect (dut.io.remainder, 2.U)
 
-    poke (dut.io.dividend, -53.S)
-    poke (dut.io.divisor,5.S)
+    poke (dut.io.signed, 1.U)
+    poke (dut.io.dividend, "b01110".U)
+    poke (dut.io.divisor,"b0011".U)
     step (1)
-    expect (dut.io.quotient, -10.S)
-    expect (dut.io.remainder, -3.S)
+    expect (dut.io.quotient, 4.U)
+    expect (dut.io.remainder, 2.U)
+
+    poke (dut.io.signed, 1.U)
+    poke (dut.io.dividend, -7.S)
+    poke (dut.io.divisor,2.U)
+    step (1)
+    expect (dut.io.quotient, -3.S)
+    expect (dut.io.remainder, -1.S)
+
+    poke (dut.io.signed, 1.U)
+    poke (dut.io.dividend, 7.S)
+    poke (dut.io.divisor,-2.S)
+    step (1)
+    expect (dut.io.quotient, -3.S)
+    expect (dut.io.remainder, 1.S)
+
+    poke (dut.io.signed, 1.U)
+    poke (dut.io.dividend, -7.S)
+    poke (dut.io.divisor,-2.S)
+    step (1)
+    expect (dut.io.quotient, 3.S)
+    expect (dut.io.remainder, -1.S)
 
     }
 

@@ -1,1 +1,1 @@
-["addsub_64_tester","booth_div_substep_tester","booth_divider_tester","booth_multiplier_tester","booth_substep_tester","getOnesComplement_tester"]
+["addsub_32_tester","addsub_64_tester","booth_div_substep_tester","booth_divider_tester","booth_multiplier_tester","booth_substep_tester","getOnesComplement_tester"]

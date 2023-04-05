@@ -34,12 +34,17 @@ class booth_multiplier_tester (dut : booth_multiplier) extends PeekPokeTester(du
     //println("Result is: " + peek(dut.io.sum).toString)
     expect (dut.io.product, "h460".U)
 
-
-    poke (dut.io.multiplier, -10.S)
-    poke (dut.io.multiplicand,3.U)
+    poke (dut.io.multiplier, -1002.S)
+    poke (dut.io.multiplicand,1.U)
     step (1)
     //println("Result is: " + peek(dut.io.sum).toString)
-    expect (dut.io.product, -30.S)  
+    expect (dut.io.product, -1002.S)    
+
+    poke (dut.io.multiplier, 125427.S)
+    poke (dut.io.multiplicand,-875.S)
+    step (1)
+    //println("Result is: " + peek(dut.io.sum).toString)
+    expect (dut.io.product, -109748625.S)  
 
     }
 

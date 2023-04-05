@@ -17,8 +17,8 @@ class xor2 extends Module{
 class getOnesComplement(N: Int=64) extends Module{
     val io = IO(new Bundle{
         val cin = Input(UInt(1.W))
-        val i1  = Input(UInt(64.W))
-        val onesComp = Output(UInt(64.W))
+        val i1  = Input(UInt(N.W))
+        val onesComp = Output(UInt(N.W))
     })
 
     val xor = Seq.fill(N)(Module(new xor2))

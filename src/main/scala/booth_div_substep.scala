@@ -3,67 +3,52 @@ import chisel3.util._
 
 class booth_div_substep extends Module{
     val io = IO(new Bundle{
-        val acc = Input(SInt(64.W))         //A
-        val Q = Input(SInt(64.W))           
-        val divisor = Input(SInt(64.W))     //M
-        val next_acc = Output(SInt(64.W))
-        val next_Q = Output(SInt(64.W))
+        val acc = Input(UInt(32.W))         //A
+        val Q = Input(UInt(32.W))           
+        val divisor = Input(UInt(32.W))     //M
+        val next_acc = Output(UInt(32.W))
+        val next_Q = Output(UInt(32.W))
     })
 
-    val g1 = Module(new(getOnesComplement))
+    val g1 = Module(new getOnesComplement(32))
 
-    val int_ip = Wire(UInt(64.W))
+    val int_ip = Wire(UInt(32.W))
 
     g1.io.cin := 1.U
-    g1.io.i1 := io.divisor.asUInt
+    g1.io.i1 := io.divisor
     int_ip := g1.io.onesComp
 
     //left shift before sending to the adder
-    val shiftedA = Wire(UInt(65.W))
-    val shiftedQ = Wire(UInt(65.W))
+    val shiftedA = Wire(UInt(33.W))
+    val shiftedQ = Wire(UInt(33.W))
     val shiftedA_LSB = Wire(UInt(1.W))
     val shiftedQ_LSB = Wire(UInt(1.W))
-    val Aout = Wire(UInt(64.W))
+    val Aout = Wire(UInt(32.W))
 
-    shiftedA := io.acc.asUInt << 1
-    shiftedA_LSB := io.Q(63)
-    shiftedQ := io.Q.asUInt << 1
+    shiftedA := io.acc << 1
+    shiftedA_LSB := io.Q(31)
+    shiftedQ := io.Q << 1
 
-    val as1 = Module(new(addsub_64))
+    val as1 = Module(new(addsub_32))
 
-    val sub_temp = Wire(UInt(64.W))
-    val c_temp   = Wire(UInt(1.W))
+    val sub_temp = Wire(UInt(32.W))
 
     as1.io.cin := 1.U
     as1.io.onesComp_ip := int_ip
-    as1.io.i0 := Cat(shiftedA(63,1),shiftedA_LSB)
+    as1.io.i0 := Cat(shiftedA(31,1),shiftedA_LSB)
     sub_temp := as1.io.sum          //sub_temp will hold the value of A-M
-    c_temp   := as1.io.cout
 
-    // //logic loop
-    // when (sub_temp(63) === 1.U){
-    //     shiftedQ_LSB := 0.U 
-    //     Aout         := Cat(shiftedA(63,1),shiftedA_LSB)
-    // }.otherwise{
-    //     shiftedQ_LSB := 1.U
-    //     Aout         := sub_temp
-    // }
-
-    when (shiftedA(64) === 0.U){
-        when (c_temp === 0.U){
-            Aout            := Cat(shiftedA(63,1),shiftedA_LSB)
-            shiftedQ_LSB    := 0.U
-        }.otherwise{
-            shiftedQ_LSB    := 1.U
-            Aout            := sub_temp
-        }
+    //logic loop
+    when (sub_temp(31) === 1.U){
+        shiftedQ_LSB := 0.U 
+        Aout         := Cat(shiftedA(31,1),shiftedA_LSB)
     }.otherwise{
-        Aout            := sub_temp
-        shiftedQ_LSB    := 1.U
+        shiftedQ_LSB := 1.U
+        Aout         := sub_temp
     }
 
-    io.next_acc := Aout.asSInt
-    io.next_Q   := Cat(shiftedQ(63,1),shiftedQ_LSB).asSInt
+    io.next_acc := Aout
+    io.next_Q   := Cat(shiftedQ(31,1),shiftedQ_LSB)
 }
 
 object boothDivSubstep extends App {

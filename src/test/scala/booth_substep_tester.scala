@@ -3,7 +3,7 @@ import chisel3.util._
 import chisel3.Driver
 import chisel3.iotesters._
 
-class booth_substep_tester (dut : booth_substep) extends PeekPokeTester(dut){
+class booth_substep_tester (dut : booth_mult_substep) extends PeekPokeTester(dut){
     poke (dut.io.acc, 0.U)
     poke (dut.io.Q,"hf0f0f0f0f0f0f0f0".U)
     poke (dut.io.multiplicand,1.U)
@@ -57,7 +57,7 @@ class booth_substep_tester (dut : booth_substep) extends PeekPokeTester(dut){
     }
 
 object booth_substep_tester extends App{
-    chisel3.iotesters.Driver(()=>new booth_substep()) {c =>
+    chisel3.iotesters.Driver(()=>new booth_mult_substep()) {c =>
         new booth_substep_tester(c)
     }
 }
