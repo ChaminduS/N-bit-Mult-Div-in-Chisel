@@ -3,13 +3,15 @@ import chisel3.util._
 
 class booth_multiplier(N:Int) extends Module{
     val io = IO(new Bundle{
-        val multiplier = Input(SInt(N.W))
-        val multiplicand = Input(SInt(N.W))
-        val product = Output(SInt((2*N).W))
+        val multiplier = Input(UInt(N.W))
+        val multiplier_signed = Input(UInt(1.W))
+        val multiplicand = Input(UInt(N.W))
+        val multiplicand_signed = Input(UInt(1.W))
+        val product = Output(UInt((2*N).W))
     })
 
-    val Q = Wire(Vec(N,SInt(N.W)))
-    val acc = Wire(Vec(N,SInt(N.W)))
+    val Q = Wire(Vec(N,UInt(N.W)))
+    val acc = Wire(Vec(N,UInt(N.W)))
     val q0 = Wire(Vec(N,UInt(1.W)))
     val qout = Wire(UInt(1.W))
 
@@ -17,7 +19,7 @@ class booth_multiplier(N:Int) extends Module{
     val product_temp_lo = Wire(UInt(N.W))
 
     q0(0) := 0.U
-    acc(0) := 0.S
+    acc(0) := 0.U
     Q(0) := io.multiplier
 
     val bs = Seq.fill(N)(Module(new booth_mult_substep(N)))
@@ -36,11 +38,11 @@ class booth_multiplier(N:Int) extends Module{
     bs((N-1)).io.Q := Q((N-1))
     bs((N-1)).io.q0 := q0((N-1))
     bs((N-1)).io.multiplicand := io.multiplicand
-    product_temp_hi := bs((N-1)).io.next_acc.asUInt
-    product_temp_lo := bs((N-1)).io.next_Q.asUInt 
+    product_temp_hi := bs((N-1)).io.next_acc
+    product_temp_lo := bs((N-1)).io.next_Q
     qout := bs((N-1)).io.q0_next
 
-    io.product := Cat(product_temp_hi,product_temp_lo).asSInt
+    io.product := Cat(product_temp_hi,product_temp_lo)
 
 }
 
